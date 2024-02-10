@@ -1,0 +1,74 @@
+ ._Myjobs {
+    max-width: 65vw;
+    display: flex;
+    flex-direction: column;
+}
+h2,
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.jobContainer {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+.jobContainer h5 {
+    
+    color: rgb(25, 95, 72);
+
+}
+.name_resume{
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+
+
+@media (max-width: 768px) {
+   
+    table {
+        /* width: 65 !important; */
+        margin: 10px !important;
+    }
+    th, td{
+        font-size: 3vw !important;
+        padding: 5px;
+    }
+    .button_view_download{
+        font-size: 2vw;
+        margin-bottom: 0.5rem;
+    }
+    .name_resume{
+        display: none;
+    }
+} 

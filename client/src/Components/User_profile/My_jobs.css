@@ -1,0 +1,432 @@
+._Myjobs {
+    display: flex;
+    color: black;
+    justify-content: space-between;
+    position: absolute;
+    left: 34.5%;
+    margin-top: 6rem !important;
+    z-index: 1;
+
+
+}
+
+.nav_profile {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+
+}
+
+.profile-container {
+    display: flex;
+    height: 100vh;
+}
+
+.resume__ {
+    margin-top: 2rem;
+    width: 60vw;
+    border-radius: 5px;
+    box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-left: 32px;
+    margin-right: 32px;
+    height: 75vh;
+
+}
+
+.down_button {
+    padding: 0.8rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+    align-items: baseline;
+
+}
+
+.down_button button {
+    background-color: rgb(25, 95, 72);
+    border-radius: 5px;
+    padding: 0 1rem;
+    color: var(--white);
+    margin-left: 20px;
+    margin-bottom: 1rem;
+}
+
+.inp_details {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding-left: 1rem;
+
+}
+
+.input_field_details {
+    border-bottom: 1px solid rgb(65, 64, 64);
+    width: 20rem;
+
+}
+
+.resume_upload {
+    color: #464545;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 53rem;
+    border: 2px dotted #646464;
+    border-radius: 10px;
+    height: 25vh;
+    margin: 2rem;
+    margin-left: 1rem;
+
+}
+
+.label_resume {
+    padding: 0.5rem;
+    border: 2px solid var(--non-photo-blue);
+    color: var(--non-photo-blue);
+    width: 150px;
+    font-weight: 500;
+    font-size: 1.2vmax;
+    border-radius: 50px;
+}
+
+.upload_resume {
+    /* background-color: rgb(243, 245, 247); */
+    /* display: none; */
+    border-radius: 10px;
+    font-size: 1rem;
+    width: 25vw;
+
+}
+
+#edit_icon {
+    font-size: 1.5vw;
+    color: hsl(204, 59%, 58%);
+}
+
+::-webkit-file-upload-button {
+    background-color: rgb(0, 213, 255);
+    border: none;
+    border-radius: 20px;
+    display: none;
+}
+
+.resume_btn_add {
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    width: 5rem;
+    position: absolute;
+    right: 4.5rem;
+
+}
+
+.resume_btn_add:hover {
+    background-color: #161616;
+}
+
+.user__profile {
+    margin-right: 2.5rem;
+    margin-top: 2rem;
+    width: 60vw;
+    border: 1px solid rgb(162, 162, 162);
+    height: 10rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.profile--picture {
+    width: 8em;
+    height: 8em;
+    margin: 1rem;
+}
+
+.add__info_experience {
+    margin-top: 2rem;
+    width: 60vw;
+    box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-bottom: 2rem;
+
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.description_textarea {
+    border: 1px solid rgb(65, 64, 64);
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.experience_info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+
+}
+
+.inp_detail_profile {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    border-radius: 5px;
+    margin-left: 1rem;
+}
+
+.profile_experience,
+.resume_heading {
+    font-size: 1.2em;
+    padding: 1rem;
+}
+
+/* .name_details_profile {
+    margin-left: 5vmin !important;
+    color: #000;
+    font-weight: 700;
+} */
+
+.add__info_experience p,
+.resume__ p {
+    font-size: 2vmin;
+    color: gray;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.profile_btn_add {
+    background-color: #333;
+    padding: 0.5rem;
+    width: 80px;
+    color: #fff;
+    border-radius: 5px;
+    margin: 5vmin;
+}
+
+#text-dark {
+    border-radius: 5px;
+    background-color: #000000;
+    color: #fff;
+}
+
+.user__profile img {
+    border: 3px solid hsl(204, 18%, 31%);
+    border-radius: 50%;
+}
+
+.experience_section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+    padding: 1rem;
+    border-bottom: 1px solid gray;
+    border-radius: 5px;
+}
+
+.experience_section h5 {
+    display: flex;
+    align-items: baseline;
+    /* padding: 0.5rem; */
+    padding-bottom: 0;
+    /* border: 1px solid gray; */
+    width: 24vw;
+    border-radius: 5px;
+    font-size: 1.3vw;
+}
+
+.experience_column {
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    justify-content: center !important;
+    padding-left: 0.5rem;
+    align-items: baseline;
+    margin: 0.5rem;
+
+}
+
+.experience_column h5 {
+    font-size: 1rem;
+}
+
+.experience_column p {
+    font-size: 1rem;
+    /* padding-right: 100px; */
+}
+
+.experience_section h5 p {
+    font-size: 1.2vw;
+
+}
+
+.edit_delete_icon {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.icon_delete {
+    color: rgb(228, 26, 26);
+}
+
+.icon_hvr:hover {
+    color: green;
+}
+
+.icon_skills {
+    color: gray;
+    font-size: 2.7vh;
+}
+
+.chip__ {
+    font-size: 1vw;
+    background-color: rgb(255, 255, 255) !important;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    color: #908d8d !important;
+    border: 1px solid #908d8d;
+    border-radius: 5px;
+    max-width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+    padding-right: 1rem;
+
+}
+
+.add__info_experience h5 {
+    color: #908d8d;
+    padding-left: 0.5rem;
+}
+
+.otp_btnn {
+    border-radius: 5px;
+    background-color: #178606;
+    color: white;
+    margin-top: 5px;
+}
+
+.otp_btnn:hover {
+    background-color: white;
+    color: #178606;
+    border: 2px solid #178606;
+    font-weight: 600;
+    resize: none;
+}
+
+.icon_verified {
+    color: #178606;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+}
+
+.verifie_your_email {
+    color: #e60d06;
+}
+
+.email_change {
+    position: relative;
+}
+
+.newEmail {
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 2rem;
+    box-shadow: 0px 0px 2px 0 var(--gray);
+
+}
+
+
+.Job__details_related {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: baseline;
+}
+
+.job_details {
+    flex-wrap: wrap;
+}
+
+
+@media (max-width: 768px) {
+    .add__info_experience h5 {
+        display: flex;
+        flex-direction: column;
+        font-size: 2vw;
+    }
+
+    .apply_job {
+        flex-wrap: wrap;
+    }
+
+    h5 p {
+        font-size: 2vw !important;
+    }
+
+    ._Myjobs {
+        left: 10%;
+    }
+
+    .user__profile {
+        width: 80vw;
+    }
+
+    .add__info_experience {
+        width: 80vw;
+    }
+
+    .profile--picture {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .profile_experience {
+        flex-direction: row !important;
+        gap: 1vw;
+    }
+
+    .chip__ {
+        font-size: 2vw;
+    }
+
+    .resume__ {
+        height: 90vh;
+    }
+
+    .down_button {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .down_button button {
+        font-size: 2vw;
+        margin-bottom: 0;
+    }
+
+    .label_resume {
+        width: 100px;
+    }
+
+    .resume_btn_add {
+        font-size: 3vw;
+        padding: 0.5rem;
+        /* margin-right: 0; */
+        width: 10vw;
+        right: 8%;
+    }
+
+    .resume_upload {
+        width: 50vw;
+    }
+}

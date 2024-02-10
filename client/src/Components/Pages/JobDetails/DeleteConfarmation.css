@@ -1,0 +1,85 @@
+/* DeleteConfirmation.css */
+
+.delete-confirmation-modal {
+    position: fixed;
+    
+    left: 50%;
+    margin: 10px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.delete-confirmation-head h4 {
+    margin-left: 1vw !important;
+    font-size: 1.5vw;
+}
+
+.delete-confirmation-head {
+    display: flex;
+    justify-content: space-between;
+    gap:1rem;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.delete-confirmation-head h4 {
+    margin: 0;
+}
+
+.close {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #333;
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.confirm-delete,
+.cancel-delete {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.confirm-delete {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.cancel-delete {
+    background-color: #3498db;
+    color: #fff;
+}
+@media (max-width: 600px) {
+    .delete-confirmation-modal{
+        left: 30%;
+        max-width: 80vw;
+        width: 100%;
+
+    }
+}

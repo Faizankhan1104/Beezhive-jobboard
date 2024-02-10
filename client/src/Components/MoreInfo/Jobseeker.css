@@ -1,0 +1,100 @@
+.jobseeker_form {
+    margin-top: 5rem;
+    max-width: 60vw;
+    border-radius: 5px;
+    border: 0.5px solid #dadada;
+    padding: 1.5rem;
+
+
+}
+
+label {
+    color: #000;
+}
+
+.deatils_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    color: #000;
+    
+}
+
+.input_field_details {
+    border-radius: 0 !important;
+    border:1px solid gray;
+    border-radius:5px !important;
+    width: 30vw !important;
+    /* border-bottom: 1px solid var(--gray); */
+    padding: 4px;
+    /* margin: 5px; */
+    /* margin-left: 2.4rem; */
+
+}
+
+.inp_details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    /* justify-content: flex-start; */
+    margin-bottom: -2rem;
+}
+
+#experienceSelector {
+    border: 1px solid gray;
+    /* border-bottom: 1px solid var(--gray); */
+    border-radius: 5px;
+    width: 30vw;
+    padding: 6px;
+    color: var(--gray);
+    
+    margin-bottom: 3rem;
+}
+
+select#experienceSelector option {
+    color: var(--gray);
+    font-size: 15px;
+}
+
+.input_field_login1 {
+    border-bottom: 1px solid var(--gray);
+    width: 35vw ;
+}
+
+input#file-upload-button {
+    background-color: red !important;
+}
+
+.skills_selection {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.search-wrapper {
+    /* border: none; */
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    width: 65vw;
+    margin-left: 5vmin;
+    margin-bottom: 10px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    /* border-bottom: 1px solid var(--gray); */
+    
+    
+}
+.sub_button{
+    padding: 5px; 
+    background-color: var(--non-photo-blue);
+    border-radius: 5px;
+}
+.name_details{
+    color: #000;
+    margin-left: 0 !important;
+}

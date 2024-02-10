@@ -1,0 +1,33 @@
+#custom-input{
+    border: 2px solid  #e2a277;
+    background-color: transparent;
+    width: 50vw;
+    color: white;
+    font-size: 1.5vw;
+    position: relative;
+    
+}
+.custum-btn{
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.6vw;
+    font-weight: 500;
+    position: absolute;
+    right: -1%;
+    text-align: center;
+    padding: 1vh;
+    
+    
+}
+.btn-outline{
+    outline: none;
+}
+@media (max-width: 768px) {
+.custum-btn{
+    border: none;
+    /* right: -5%;     */
+}
+
+}

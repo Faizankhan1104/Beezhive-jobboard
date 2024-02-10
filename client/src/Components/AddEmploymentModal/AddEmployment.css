@@ -1,0 +1,122 @@
+/* Employment Modal Styles */
+.employment-modal {
+  position: absolute;
+  top: 5%;
+  left: 20%;  
+  transform: translate(-50%, -50%);
+  margin-left: 50px;
+  /* max-width: 400px; */
+  /* width: 100%; */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.modalHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 10px; */
+}
+
+.modalHead h4 {
+  margin: 0;
+  font-size: 1vw;
+}
+
+.job_status {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+}
+
+.group1 {
+  /* margin-bottom: 10px; */
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  /* margin-bottom: 5px; */
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  /* border: 1px solid #ccc; */
+  border-radius: 4px;
+}
+#company, #designation, #noticePeriod{
+  border: none;
+  border-bottom: 1px solid #ccc !important;
+}
+
+button.add-employment {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button.add-employment:hover {
+
+  background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+  h5{
+    font-size: 3vw !important;
+  }
+   
+.ReactModal__Content{
+  border: none !important;
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+
+  .modal-content {
+    
+    top: 0;
+    left: 70% !important;
+    
+    /* max-width: 80vw; */
+    /* width: 100%; */
+  }
+
+  ._job_label {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-size: 2.5vw;
+  }
+
+  #experienceSelector {
+    padding: 2px;
+  }
+
+  .add-employment {
+    padding: 4px !important;
+    font-size: 10px !important;
+    margin-top: -10px !important;
+  }
+
+
+}

@@ -1,0 +1,419 @@
+/* showJobs.css */
+.job_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+.search-bar {
+  font-family: Helvetica, sans-serif;
+  /* margin-top: 0; */
+  width: 50vw;
+  margin-left: 2rem;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-bar {
+  position: absolute;
+  top: 60%;
+
+}
+
+.input_search:focus {
+  outline: none;
+  border: 2px solid #e2a277;
+  /* border-right: none; */
+  color: white;
+  font-size: 1.5vw;
+}
+
+.input_search {
+  background-color: transparent;
+  margin-top: 7vmax;
+  padding-left: 20px;
+  margin-left: 20px;
+  width: 40rem;
+  border-radius: 15px;
+  border: 2px solid #e2a277;
+  /* border-right: none; */
+  /* height: 49.5px; */
+  margin-bottom: 1rem;
+  color: white;
+  font-size: 1.5vw;
+  position: relative;
+
+}
+
+
+
+#pera_job {
+  font-size: 70px;
+  font-weight: 800;
+  text-align: center;
+  color: var(--gray);
+  opacity: 1;
+  /* Fully visible */
+  transition: s ease-in-out;
+}
+
+/* Optionally, you can provide an alternative focus style */
+/* For example, you can add a box-shadow or change the border color */
+
+
+
+.search_btn:hover {
+  font-size: 1.5vw;
+  font-weight: 500;
+  background-color: transparent;
+  color: var(--gray);
+  cursor: pointer;
+}
+
+
+.container {
+  /* justify-self: center; */
+  display: flex;
+  align-items: flex-start;
+  /* margin: 20px; */
+  margin-top: 50px;
+  gap: 1.5rem;
+
+}
+
+.btnn_side {
+  background-color: #000;
+  color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.sidebar {
+  margin-left: 50px;
+  font-family: Helvetica, sans-serif;
+  width: 20rem;
+  background-color: var(--white);
+  color: var(--black);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.profile_div {
+  text-align: center;
+}
+
+.profile-picture-container {
+  position: relative;
+}
+
+.profile-picture {
+  margin-top: 10px;
+
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--black);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.file-input {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.all_filters {
+  margin-top: 20px;
+}
+
+h5 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.skills_select {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.select_skills {
+  display: flex;
+  align-items: center;
+}
+
+.multiselect {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  overflow-y: auto;
+}
+
+.color {
+  margin-top: 20px;
+}
+
+.exp {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+.exp_icon {
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+}
+
+.value-left,
+.value-right {
+  flex: 1;
+  text-align: center;
+}
+
+.value-right {
+  font-weight: bold;
+}
+
+.jobList {
+
+  width: 60vw;
+
+  color: var(--black);
+  max-height: 100%; 
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+ul {
+  list-style: none;
+  padding: 0;
+
+}
+
+.lists {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 2px 0 var(--gray);
+  border-radius: 10px;
+  padding: 25px;
+  margin-left: 20px;
+  margin-top: 2px;
+  width: 80%;
+
+}
+
+h3 {
+
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+p {
+  margin: 0;
+}
+
+.pera {
+  margin-left: -3;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gray);
+  line-height: 18px;
+}
+
+.job_details {
+  display: flex;
+
+}
+
+.peraSub {
+  margin-top: 10px;
+  font-family: Helvetica, sans-serif;
+  transform: rotate(0);
+  font-weight: 500;
+  font-size: 0.9rem;
+  /* line-height: 18px; */
+  color: var(--gray);
+  text-align: left !important;
+
+
+}
+
+.apply_job {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 1px;
+}
+
+.btn_apply {
+  width: 6rem;
+  padding: 0.4rem;
+  margin-top: 10px;
+  font-size: 1.3vw;
+  font-weight: 500;
+  color: white;
+  border-radius: 3px;
+  background-color: rgb(37, 123, 244);
+  transition: transform 0.2s ease;
+
+
+}
+
+.btn_apply:hover {
+  background-color: white;
+  border: 2px solid rgb(37, 123, 244);
+  color: rgb(37, 123, 244);
+  padding: 0.3rem;
+}
+
+.option {
+  display: flex;
+  font-size: 1.2vw;
+}
+
+.option input[type="checkbox"] {
+  width: 15px;
+  /* Set the desired width */
+  height: 15px;
+}
+
+.custome_calass {
+  border: 1p solid #e2a277;
+}
+
+.apld_btn {
+  background-color: rgb(36, 124, 179);
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-size: 1.3vw;
+  font-weight: 500;
+  width: 8vw;
+  color: white;
+}
+
+
+span::before {
+  content: "";
+  display: inline-block;
+  width: 1.5px;
+  /* Adjust the width as needed */
+  height: 70%;
+  /* This will make it extend the full height of the <span> */
+  background-color: lightgrey;
+  /* Change the color as needed */
+  margin-left: 8px;
+  margin-right: 8px;
+
+}
+
+.optionListContainer {
+  position: relative !important;
+}
+
+.search-wrapper {
+  padding: 0 !important;
+
+}
+
+#experienceSelector {
+  width: 100%;
+  border: 1px solid rgb(201, 200, 200);
+  position: relative !important;
+  border-radius: 5px;
+  padding: 1rem;
+
+}
+
+.super_Seacrh {
+  position: relative;
+}
+
+
+.group__1 {
+  margin-bottom: 10px;
+}
+
+.super_Seacrh img {
+  margin-top: 0 !important;
+  width: 100%;
+  box-shadow: 2px 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.radio_exp_filter {
+  display: flex;
+  flex-direction: column;
+  align-self: baseline;
+  justify-content: center;
+}
+
+.reset_button {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #e2a277;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
+
+
+/* Media query for responsiveness */
+@media (max-width: 1024px) {
+  .sidebar{
+    width: 30rem;
+  }
+  .lists{
+    width: 90%;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .apply_job{
+    margin-top: 30px;
+  }
+  .apld_btn{
+    width: 7rem;
+    font-size: 2vw;
+  }
+  .container {
+    flex-direction: column;
+  }
+
+
+  .sidebar {
+    display: none;
+
+  }
+
+  .jobList {
+    width: 100%;
+  }
+}

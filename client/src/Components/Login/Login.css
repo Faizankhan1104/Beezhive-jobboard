@@ -1,0 +1,109 @@
+/* LoginModal.css */
+.login-modal {
+  position: absolute;
+  /* top: 50%; */
+  left: 20%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  cursor: default;
+}
+
+.loginHead {
+  margin-top: 0;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+h4 {
+  color: #000;
+  margin-left: 40% !important;
+}
+label{
+  margin-left: 10px !important;
+}
+
+
+
+
+.input_field{
+  margin-top: 0 !important;
+  border-radius: 10px !important ;
+  border: 1px solid var(--gray);
+}
+
+
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+form {
+  text-align: start;
+}
+
+.modal-content {
+  border: none;
+  text-align: center;
+}
+#register{
+  text-decoration: none;
+  color: var(--non-photo-blue);
+  font-size: small;
+  font-weight: 300;
+  
+  align-self: center;
+  cursor: default;
+}
+
+
+
+.login {
+  left: 0;
+  width: 30%;
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+  background-color: #5b5a5a;
+}
+
+.close {
+  align-self: flex-end;
+  text-align: right;
+  width: 30px;
+  background-color: transparent;
+  color: #000;
+  font-weight: 400;
+  font-size: 1.5rem;
+  border: none;
+  /* padding: 0 0; */
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.close:hover {
+  background-color: transparent;
+  color: #d32f2f;
+}
+#links{
+  text-decoration: none;
+  color: var(--gray);
+  margin-left: 100px;
+}

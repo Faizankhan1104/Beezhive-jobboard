@@ -1,0 +1,77 @@
+body {
+  background-color: #fff; /* Set the background color as needed */
+  color: #000; /* Set the text color as needed */
+}
+.formMain{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+    left: 20%;
+  }
+  .job-form {
+      width: 60vw;
+      margin: 4rem;
+      margin-top: 7rem;
+    
+    }
+    .heading{
+      text-align: left;
+      margin-bottom: 30px;
+    
+    }
+    .form-label {
+      display: block;
+      margin-bottom: 5px;
+     
+    }
+    .quill-editor {
+      margin-bottom: 30px;
+      margin-top: 20px;
+      height: 250px;
+    }
+    
+    
+    .form-input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 16px;
+    }
+   
+    .form-button {
+      display: inline-block;
+      width: 103%;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    
+    .form-button:hover {
+      background-color: #0056b3;
+    }
+    .p-editor-toolbar{
+      align-items: center;
+      justify-content: space-between;
+    }
+    .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
+      border-color: #2c64b8;
+      color: #000000;
+      
+  }
+  @media (max-width: 768px) {
+    .job-form{
+      margin: 7rem 1rem 1rem 2rem;
+      width: 90vw;
+    }
+  }
+
+  
