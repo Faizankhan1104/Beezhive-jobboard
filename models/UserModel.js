@@ -54,7 +54,6 @@ const UserSchema = new Schema({
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Job',
-      unique: true,
     },
   ],
   verified: { type: Boolean, default: false },
