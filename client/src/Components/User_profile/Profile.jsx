@@ -33,7 +33,7 @@ const Profile = () => {
     const fetchUserProfile = async () => {
       
       try {
-        const response = await axios.get(`/api/v1/auth/get-User/${auth.user._id}`);
+        const response = await axios.get(`/api/v1/auth/get-User/${auth.user?._id}`);
 
 
         if (response.data) {
