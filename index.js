@@ -54,11 +54,19 @@ app.use("/api/v1/employment", employmentRoutes);
 app.use("/api/v1/email", emailRoute);
 
 //static files
-app.use(express.static(path.join(__dirname, './client/build')));
+const __dirname1 = path.resolve();
 
-app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname1, "./client/build")));
+
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve(__dirname1, "./client", "build", "index.html"))
+  );
+} else {
+  app.get("/", (req, res) => {
+    res.send("API is running..");
+  });
+}
 
 
 app.listen(port, () => {
