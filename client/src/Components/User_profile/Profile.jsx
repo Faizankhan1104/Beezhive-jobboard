@@ -18,8 +18,6 @@ import { toast } from 'react-toastify'
 
 
 const Profile = () => {
-  const [selectedTechStack, setSelectedTechStack] = useState([]);
-  const [selectedSkills, setSelectedSkills] = useState([]);
   const [auth, setAuth] = useAuth();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [addSkills, setAddSkills] = useState(false)
