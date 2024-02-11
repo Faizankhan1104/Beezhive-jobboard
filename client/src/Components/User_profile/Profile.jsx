@@ -31,13 +31,13 @@ const Profile = () => {
 
   useEffect(() => {
     const fetchUserProfile = async () => {
-      
+
       try {
         const response = await axios.get(`/api/v1/auth/get-User/${auth.user?._id}`);
 
 
         if (response.data) {
-          
+
           setUser(response.data.user);
 
         } else {
@@ -82,16 +82,16 @@ const Profile = () => {
   const handleDelete = async () => {
     try {
       await axios.delete(`/api/v1/job/delete-job/${employmentDetails?._id}`);
-      
+
       toast.success('Delete Successfully')
 
     } catch (error) {
-      
+
       toast.error('Error fetching user data')
     }
   };
 
-  
+
 
   const handleOpenModal = () => {
     setUpdateProfileModel(true);
@@ -114,8 +114,12 @@ const Profile = () => {
     const fetchEmploymentDetails = async () => {
       try {
         const response = await axios.get(`/api/v1/employment/employment-details/${auth.user?._id}`);
-        
-        setEmploymentDetails(response.data);
+        if (response.data) {
+
+          setEmploymentDetails(response.data);
+        } else {
+          console.error('Profile picture data not found in the response.');
+        }
       } catch (error) {
         console.error('Error fetching employment details:', error);
       }
@@ -123,11 +127,17 @@ const Profile = () => {
 
     fetchEmploymentDetails();
   }, [auth]);
+
   useEffect(() => {
     const fetchEmploymentDetails = async () => {
       try {
         const response = await axios.get(`/api/v1/get-employment-details/${auth.user?._id}`);
-        setEmploymentDetails(response.data);
+
+        if (response.data) {
+          setEmploymentDetails(response.data);
+        } else {
+          console.error('Profile picture data not found in the response.');
+        }
       } catch (error) {
         console.error('Error fetching employment details:', error);
       }
@@ -163,21 +173,21 @@ const Profile = () => {
             </div>
             <div className="add__info_experience">
 
-              {employmentDetails.map((employment) => (
-                <div key={employment._id}>
+              {employmentDetails?.map((employment) => (
+                <div key={employment?._id}>
                   <div className='experience_section'>
                     <div className='experience_column'>
-                      <h5>Experience: </h5> <h5> {employment.employmentExperience} </h5>
+                      <h5>Experience: </h5> <h5> {employment?.employmentExperience} </h5>
                     </div>
                     <div className='experience_column'>
-                      <h5>Company Name: </h5> <h5>{employment.company}</h5>
+                      <h5>Company Name: </h5> <h5>{employment?.company}</h5>
                     </div>
                     <div className='experience_column'>
-                      <h5>Designation: </h5> <h5>{employment.designation}</h5>
+                      <h5>Designation: </h5> <h5>{employment?.designation}</h5>
                     </div>
-                    {employment.jobStatus === 'Current' ? (<div className='experience_column'> <h5>Notice Period: </h5> <h5>{employment.noticePeriod}</h5></div>) : (<div className='experience_column'><h5>Job Status: </h5><h5>{employment.jobStatus}</h5></div>)}
+                    {employment?.jobStatus === 'Current' ? (<div className='experience_column'> <h5>Notice Period: </h5> <h5>{employment?.noticePeriod}</h5></div>) : (<div className='experience_column'><h5>Job Status: </h5><h5>{employment?.jobStatus}</h5></div>)}
                     <div className='edit_delete_icon'>
-                      <MdDelete onClick={() => handleDeleteModel(employment._id)} className='icon_delete  icon_hvr' />
+                      <MdDelete onClick={() => handleDeleteModel(employment?._id)} className='icon_delete  icon_hvr' />
                     </div>
                   </div>
                 </div>
@@ -193,9 +203,9 @@ const Profile = () => {
               <div className="add__info_experience">
                 <h5 className="profile_experience">Tech Stack</h5>
                 <div className='skills'>
-                  {user?.selectedTechStack.map((tech) => (
+                  {user?.selectedTechStack?.map((tech) => (
 
-                    <span className='chip__ chip' key={tech.id}>{tech.name}</span>
+                    <span className='chip__ chip' key={tech?.id}>{tech?.name}</span>
 
                   ))}
                 </div>
@@ -204,8 +214,8 @@ const Profile = () => {
               <div className="add__info_experience">
                 <h5 className="profile_experience">Skills</h5>
                 <div className='skills'>
-                  {user?.selectedSkills.map((skill) => (
-                    <span className='chip__  chip' key={skill.id}>{skill.name}</span>
+                  {user?.selectedSkills?.map((skill) => (
+                    <span className='chip__  chip' key={skill?.id}>{skill?.name}</span>
                   ))}
                 </div>
               </div>
