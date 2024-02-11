@@ -167,27 +167,27 @@ const Navbar = ({ userName }) => {
             !auth.user ? (<>
               <button className='btn btn-dark ' onClick={handleJobPostClick} >Post Jobs For Free</button>
             </>) : (<>
-              <div class="dropdown ">
-                <button class="btn d-flex align-items-center btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <div className="dropdown ">
+                <button className="btn d-flex align-items-center btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <div className=' profile-picture-container'>
                     <img src={userImg} alt='Profile' className='profile-picture-nav' />
                     Profile
                   </div>
                 </button>
-                <ul class="dropdown-menu ">
-                  <li><NavLink class="dropdown-item " to={`/${auth.user?.userType}/profile`}>Hii {auth?.user.name}</NavLink></li>
-                  {auth?.user.userType === 'employer' ? (<><li><NavLink class="dropdown-item" to={`/${auth.user?.userType}/myjobs`}>Posted Jobs</NavLink></li><li><NavLink class="dropdown-item" to={`/${auth.user?.userType}/job-applicants`}>Applicants</NavLink></li>
+                <ul className="dropdown-menu ">
+                  <li><NavLink className="dropdown-item " to={`/${auth.user?.userType}/profile`}>Hii {auth?.user.name}</NavLink></li>
+                  {auth?.user.userType === 'employer' ? (<><li><NavLink className="dropdown-item" to={`/${auth.user?.userType}/myjobs`}>Posted Jobs</NavLink></li><li><NavLink className="dropdown-item" to={`/${auth.user?.userType}/job-applicants`}>Applicants</NavLink></li>
 
-                  </>) : (<li><NavLink class="dropdown-item" to={`/${auth.user?.userType}/my-applied-Job`}>My Jobs</NavLink></li>)}
+                  </>) : (<li><NavLink className="dropdown-item" to={`/${auth.user?.userType}/my-applied-Job`}>My Jobs</NavLink></li>)}
 
                   <li>
                     {auth.user?.userType === 'jobseeker' ? (
-                      <NavLink class="dropdown-item" to={`/${auth.user?.userType}/resume`}>Upload Resume</NavLink>
+                      <NavLink className="dropdown-item" to={`/${auth.user?.userType}/resume`}>Upload Resume</NavLink>
                     ) : (
-                      <NavLink class="dropdown-item" to={`/${auth.user?.userType}/jobpost`}>Post a Free Job</NavLink>
+                      <NavLink className="dropdown-item" to={`/${auth.user?.userType}/jobpost`}>Post a Free Job</NavLink>
                     )}
                   </li>
-                  <li><NavLink class="dropdown-item" to={`/${auth?.user?.userType}/change-email`}>Change Email</NavLink></li>
+                  <li><NavLink className="dropdown-item" to={`/${auth?.user?.userType}/change-email`}>Change Email</NavLink></li>
                   <li><NavLink onClick={handleLogout} to="/" activeClassName="" activeStyle={null}>
                     Logout
                   </NavLink></li>

@@ -99,7 +99,7 @@ const Applicants = () => {
                 ))}
               </tbody>
             </table> */}
-              <table class="table">
+              <table className="table">
                 <thead>
                   <tr>
                     <th scope="col">Name</th>

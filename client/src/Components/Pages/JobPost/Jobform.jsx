@@ -29,6 +29,7 @@ const JobForm = () => {
     const [selectedSkills, setSelectedSkills] = useState([]);
     const [currentSkills, setCurrentSkills] = useState([]);
     const [auth, setAuth] = useAuth();
+    const navigate = useNavigate();
 
     const handleTechStackChange = (selectedList) => {
         setSelectedTechStack(selectedList);
@@ -100,7 +101,7 @@ const JobForm = () => {
     const [description, setDescription] = useState('');
 
     const [formData, setFormData] = useState(initialState);
-    const navigate = useNavigate();
+    
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -119,6 +120,7 @@ const JobForm = () => {
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = description;
         const plainText = tempDiv.textContent || tempDiv.innerText || '';
+        navigate('/');
 
         try {
 
@@ -128,15 +130,18 @@ const JobForm = () => {
                 selectedTechStack,
                 selectedSkills,
             });
+            console.log(response)
             if (response.status === 201) {
-                
+
                 setFormData(initialState);
-                
+
                 setDescription('');
                 toast.success("Job Posted Successfully")
                 navigate('/');
-
+                console.log('after Home')                
             }
+            
+            
 
         } catch (error) {
             console.error('Error submitting data:', error);

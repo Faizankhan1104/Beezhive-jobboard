@@ -49,9 +49,7 @@ export const App = () => {
       <main>
 
         <Routes>
-          <Route path='/' element={<ShowJobs />} />
-          {/* <Route path={`/${auth.user?.userType}/details`} element={""} > */}
-
+          <Route path="/" element={<ShowJobs />} />
           <Route path='/search' element={<SearchJob />} />
           <Route path='/jobseeker/resume' element={<Resume />} />
 

@@ -149,7 +149,7 @@ const Profile = () => {
 
               <div>
                 <h6>{user?.name} <FaUserEdit id='edit_icon' onClick={handleOpenModal} /></h6>
-                <h6>{auth?.user.email}</h6>
+                <h6>{auth?.user?.email}</h6>
                 <h6>
                   {user?.about}
                 </h6>
