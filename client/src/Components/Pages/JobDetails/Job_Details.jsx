@@ -96,7 +96,7 @@ const JobDetails = () => {
   return (
     <Layout>
       <div className="main_container">
-        <div className="row container">
+        <div >
           <div className="job_details_headers">
             <div className="job_title"><h3>{job?.jobTitle} </h3><span>{job?.company}</span></div>
             <div className="Job__details">

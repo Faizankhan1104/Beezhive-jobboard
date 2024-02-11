@@ -58,7 +58,7 @@ const Login = ({ isOpen, onClose, onLogin, onSwitchToRegister }) => {
       className="login-modal"
       overlayClassName="overlay"
     >
-      <div className="modal-content">
+      <div className="modal-content_login">
         <div className='loginHead'>
           <h4>Login</h4>
 

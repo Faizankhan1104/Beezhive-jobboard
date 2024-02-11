@@ -1,12 +1,12 @@
 /* Employment Modal Styles */
-.employment-modal {
+.modal-content_addEmp {
   position: absolute;
-  top: 5%;
-  left: 20%;  
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   margin-left: 50px;
-  /* max-width: 400px; */
-  /* width: 100%; */
+  max-width: 400px;
+  width: 100%;
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
@@ -60,7 +60,10 @@ input {
   /* border: 1px solid #ccc; */
   border-radius: 4px;
 }
-#company, #designation, #noticePeriod{
+
+#company,
+#designation,
+#noticePeriod {
   border: none;
   border-bottom: 1px solid #ccc !important;
 }
@@ -81,24 +84,18 @@ button.add-employment:hover {
   background-color: #45a049;
 }
 
-@media (max-width: 600px) {
-  h5{
+@media (max-width: 768px) {
+  .modal-content_addEmp {
+    max-width: 300px;
+    left: 35%;
+  }
+
+  h5 {
     font-size: 3vw !important;
   }
-   
-.ReactModal__Content{
-  border: none !important;
-  background-color: rgba(255, 255, 255, 0) !important;
-}
 
-
-  .modal-content {
-    
-    top: 0;
-    left: 70% !important;
-    
-    /* max-width: 80vw; */
-    /* width: 100%; */
+  .modalHead h4 {
+    font-size: 15px;
   }
 
   ._job_label {
@@ -106,6 +103,15 @@ button.add-employment:hover {
     align-items: flex-end;
     justify-content: space-between;
     font-size: 2.5vw;
+  }
+
+  .ReactModal__Content {
+    background-color: transparent;
+  }
+
+  .ReactModal__Content {
+    background-color: transparent !important;
+    border: none !important;
   }
 
   #experienceSelector {

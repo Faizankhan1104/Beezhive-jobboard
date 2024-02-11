@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
+    width: 100%;
 }
 .job_details_headers {
     display: flex;
@@ -9,6 +10,7 @@
     border-radius: 20px;
     box-shadow: 2px 1px 2px 1px rgba(0, 0, 0, 0.1);
     width: 60vw;
+    margin: 20px;
 
 
 }
@@ -106,7 +108,8 @@
     /* display: flex; */
     border-radius: 20px;
     box-shadow: 2px 1px 2px 1px rgba(0, 0, 0, 0.1);
-    width: 60vw;   
+    width: 60vw;  
+    margin: 20px; 
 }
 
 .skills_jd{
@@ -131,6 +134,10 @@
     width: 35vw;
     border-radius: 20px;
     box-shadow: 2px 1px 2px 1px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+.job_description{
+    margin: 20px;
 }
 .similar_head{
     width: 35vw;
@@ -147,4 +154,15 @@
     .main_container{
         flex-direction: column;
     }
+    .job_details_headers, .job_description, .job_details_skills {
+        width: 90vw;
+    }
+    .skills_jd{
+        flex-wrap: wrap;
+    }
+    .similar_related-job{
+        width: 90vw;
+        margin: 20px;
+    }
+
 }

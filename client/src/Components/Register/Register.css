@@ -1,5 +1,5 @@
 /* LoginModal.css */
-.modal-content {
+.modal-content_register {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -162,4 +162,12 @@ button[type="submit"]:hover {
   border: 2px solid var(--non-photo-blue);
   padding: 0.5rem;
   border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .modal-content_register {
+    max-width: 300px !important;
+    
+  }
+
 }

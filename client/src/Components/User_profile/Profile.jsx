@@ -81,7 +81,7 @@ const Profile = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/api/v1/job/delete-job/${employmentDetails._id}`);
+      await axios.delete(`/api/v1/job/delete-job/${employmentDetails?._id}`);
       
       toast.success('Delete Successfully')
 

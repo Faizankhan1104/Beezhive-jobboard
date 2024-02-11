@@ -414,6 +414,6 @@ span::before {
   }
 
   .jobList {
-    width: 100%;
+    width: 90vw;
   }
 }

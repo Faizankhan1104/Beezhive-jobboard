@@ -21,6 +21,11 @@
     
     
 }
+.custum-btn:hover{
+    background-color: transparent !important;
+    font-weight: 700;
+}
+
 .btn-outline{
     outline: none;
 }

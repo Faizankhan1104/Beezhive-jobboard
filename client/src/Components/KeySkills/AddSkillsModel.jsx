@@ -3,7 +3,8 @@ import Modal from 'react-modal';
 import axios from 'axios';
 import { skillArrays, techStacks } from '../../Skills';
 import Multiselect from 'multiselect-react-dropdown';
-import {toast} from 'react-toastify'
+import { toast } from 'react-toastify'
+// import './AddSkills.css'
 
 const AddSkillsModel = ({ isOpen, onClose, onAddEmployment, auth }) => {
     const [selectedTechStack, setSelectedTechStack] = useState([]);
@@ -55,9 +56,9 @@ const AddSkillsModel = ({ isOpen, onClose, onAddEmployment, auth }) => {
             className="employment-modal"
             overlayClassName="overlay"
         >
-            <div className="modal-content">
+            <div className="modal-content_addEmp">
                 <div className='modalHead'>
-                    <h4>Add Employment</h4>
+                    <h4>Add Skills</h4>
                     <button className="close" onClick={onClose}>X</button>
                 </div>
                 <form onSubmit={handleSubmit}>

@@ -52,8 +52,8 @@ const AddEmploymentModal = ({ isOpen, onClose, onAddEmployment }) => {
             onRequestClose={onClose}
             className="employment-modal"
             overlayClassName="overlay"
-        >  <div className='top_modal'>
-                <div className="modal-content">
+        >  
+                <div className="modal-content_addEmp">
                     <div className='modalHead'>
                         <h5>Add Employment</h5>
                         <button className="close" onClick={onClose}>X</button>
@@ -130,7 +130,7 @@ const AddEmploymentModal = ({ isOpen, onClose, onAddEmployment }) => {
                         <button className='add-employment' >Add Employment</button>
                     </form>
                 </div>
-            </div>
+            
         </Modal>
     );
 };

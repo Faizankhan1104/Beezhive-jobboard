@@ -80,7 +80,7 @@ const Registration = ({ isOpen, onClose, onRegister }) => {
             className="registration-modal"
             overlayClassName="overlay"
         >
-            <div className="modal-content">
+            <div className="modal-content_register">
                 <div className="registrationHead">
                     <h4>Register</h4>
                     <button className="close" onClick={onClose}>X</button>

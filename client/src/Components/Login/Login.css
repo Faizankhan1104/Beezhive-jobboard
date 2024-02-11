@@ -1,8 +1,8 @@
 /* LoginModal.css */
-.login-modal {
+.modal-content_login{
   position: absolute;
-  /* top: 50%; */
-  left: 20%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
   padding: 20px;
@@ -106,4 +106,9 @@ button[type="submit"]:hover {
   text-decoration: none;
   color: var(--gray);
   margin-left: 100px;
+}
+@media (max-width: 768px) {
+  .login-modal {
+    max-width: 300px !important;
+  }
 }
