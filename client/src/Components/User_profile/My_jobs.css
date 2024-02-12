@@ -357,6 +357,11 @@
 .job_details {
     flex-wrap: wrap;
 }
+.dis_btn{
+    background-color: #529a47;
+    border-radius: 5px;
+    margin: 5px;
+}
 
 
 @media (max-width: 768px) {

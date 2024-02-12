@@ -5,18 +5,20 @@ import axios from 'axios';
 import { RiVerifiedBadgeLine } from "react-icons/ri";
 import { useNavigate } from 'react-router-dom';
 import {toast} from 'react-toastify'
+import { classNames } from 'primereact/utils';
 
 
 const EmailChange = () => {
-    const [email, setEmail] = useState('');
     const [otp, setOtp] = useState('');
     const [verificationStatus, setVerificationStatus] = useState('');
     const [auth, setAuth] = useAuth();
+    const [otpbtn, setOtpBtn] = useState(false)
     const [verificationCode, setVerificationCode] = useState('');
     const [user, setUser] = useState();
     const [newEmail, setNewEmail] = useState('');
     const navigate = useNavigate();
     const [currentPassword, setCurrentPassword] = useState();
+    const [isclassName, setClassName] = useState('otp_btnn')
 
 
 
@@ -54,11 +56,12 @@ const EmailChange = () => {
             
             setVerificationCode(result.verificationCode)
             
+            setClassName('dis_btn')
 
-
-            if (result.message === 'Verification email sent successfully') {
-                // setVerificationStatus('OTP sent successfully! Check your email.');
+            if (response.status ===  200 ) {
+                
                 toast.success('OTP sent successfully! Check your email')
+                setOtpBtn(true);
 
             } else {
                 setVerificationStatus('Failed to send OTP. Please try again.');
@@ -127,7 +130,7 @@ const EmailChange = () => {
                     {user?.verified ? (<><RiVerifiedBadgeLine className='icon_verified' /></>) : (<></>)}
                     {user?.verified ? (<></>) : (<>
                         <p className='verifie_your_email'>Please Verify Your Email !</p>
-                        <button className='otp_btnn' onClick={() => sendOTP(auth?.user?.email)}>
+                        <button className={isclassName}  onClick={() => sendOTP(user?.email)} disabled={otpbtn} >
                             Send OTP
                         </button></>)}
 
