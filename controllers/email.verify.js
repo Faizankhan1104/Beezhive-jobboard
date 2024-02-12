@@ -70,7 +70,7 @@ module.exports.forgetPasswordController = async (req, res) => {
         from: process.env.EMAIL_USERNAME,
         to: email,
         subject: 'Reset Password',
-        text: `Click the following link to reset your password: ${process.env.CORS_ORIGIN}/reset-password/${resetToken}`,
+        text: `Click the following link to reset your password: https://beezhive.onrender.com/reset-password/${resetToken}`,
       };
 
       await transporter.sendMail(mailOptions);
