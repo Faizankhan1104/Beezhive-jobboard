@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 const ForgetPassword = () => {
   const [email, setEmail] = useState('');
   const [otpSent, setOtpSent] = useState(false);
+  const [isButtonDisabled, setButtonDisabled] = useState(false);
   const [otpStatus, setOTPStatus] = useState('');
 
 
@@ -14,11 +15,14 @@ const ForgetPassword = () => {
     try {
       // Make an API call to your backend to send OTP
       const response = await axios.post('/api/v1/email/forgot-password', { email });
-
+      
+      setButtonDisabled(true);
       if (response.status === 200) {
-        setOtpSent(true);
-        // setOTPStatus("Check your email")
         toast.success("Check Your Email")
+        setOtpSent(true);
+        
+        // setOTPStatus("Check your email")
+        
         
       } else if (response.status === 400) {
         // setOTPStatus("User Not Found")
@@ -46,7 +50,7 @@ const ForgetPassword = () => {
             placeholder="example@example.com"
             onChange={(e) => setEmail(e.target.value)}
           />
-          <button onClick={handleSendOTP}>Send OTP</button>
+          <button onClick={handleSendOTP} disabled={isButtonDisabled} >Send OTP</button>
           <p>{otpStatus}</p>
         </div>
       </div>
