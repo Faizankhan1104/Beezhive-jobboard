@@ -170,53 +170,64 @@ const Profile = () => {
               </button>
             </div>
             <div className="add__info_experience">
+              {employmentDetails.length < 1 ? (<></>) : (
+                <>
+                  {employmentDetails?.map((employment) => (
+                    <div key={employment?._id}>
+                      <div className='experience_section'>
+                        <div className='experience_column'>
+                          <h5>Experience: </h5> <h5> {employment?.employmentExperience} </h5>
+                        </div>
+                        <div className='experience_column'>
+                          <h5>Company Name: </h5> <h5>{employment?.company}</h5>
+                        </div>
+                        <div className='experience_column'>
+                          <h5>Designation: </h5> <h5>{employment?.designation}</h5>
+                        </div>
+                        {employment?.jobStatus === 'Current' ? (<div className='experience_column'> <h5>Notice Period: </h5> <h5>{employment?.noticePeriod}</h5></div>) : (<div className='experience_column'><h5>Job Status: </h5><h5>{employment?.jobStatus}</h5></div>)}
+                        <div className='edit_delete_icon'>
+                          <MdDelete onClick={() => handleDeleteModel(employment?._id)} className='icon_delete  icon_hvr' />
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </>
+              )}
 
-              {employmentDetails?.map((employment) => (
-                <div key={employment?._id}>
-                  <div className='experience_section'>
-                    <div className='experience_column'>
-                      <h5>Experience: </h5> <h5> {employment?.employmentExperience} </h5>
-                    </div>
-                    <div className='experience_column'>
-                      <h5>Company Name: </h5> <h5>{employment?.company}</h5>
-                    </div>
-                    <div className='experience_column'>
-                      <h5>Designation: </h5> <h5>{employment?.designation}</h5>
-                    </div>
-                    {employment?.jobStatus === 'Current' ? (<div className='experience_column'> <h5>Notice Period: </h5> <h5>{employment?.noticePeriod}</h5></div>) : (<div className='experience_column'><h5>Job Status: </h5><h5>{employment?.jobStatus}</h5></div>)}
-                    <div className='edit_delete_icon'>
-                      <MdDelete onClick={() => handleDeleteModel(employment?._id)} className='icon_delete  icon_hvr' />
-                    </div>
-                  </div>
-                </div>
-              ))}
+
             </div>
-            {auth.user?.userType === 'employer' ? (<></>) : (<div className="add__info_experience">
+            {auth.user?.userType === 'employer' ? (<> </>) : (<div className="add__info_experience">
               <h5 className="profile_experience">Key Skills <FiEdit2 onClick={handleaddSkilla} className='icon_skills' /></h5>
               <p>
                 Tell recruiters what you know or what you are known for e.g. Direct Marketing,
                 Oracle, Java etc. We will send you job recommendations based on these skills.
               </p>
 
-              <div className="add__info_experience">
-                <h5 className="profile_experience">Tech Stack</h5>
-                <div className='skills'>
-                  {user?.selectedTechStack?.map((tech) => (
+              {user?.selectedTechStack.length < 1 ? (<></>) : (
+                <>
+                  <div className="add__info_experience">
+                    <h5 className="profile_experience">Tech Stack</h5>
+                    <div className='skills'>
+                      {user?.selectedTechStack?.map((tech) => (
 
-                    <span className='chip__ chip' key={tech?.id}>{tech?.name}</span>
+                        <span className='chip__ chip' key={tech?.id}>{tech?.name}</span>
 
-                  ))}
-                </div>
-              </div>
+                      ))}
+                    </div>
+                  </div>
 
-              <div className="add__info_experience">
-                <h5 className="profile_experience">Skills</h5>
-                <div className='skills'>
-                  {user?.selectedSkills?.map((skill) => (
-                    <span className='chip__  chip' key={skill?.id}>{skill?.name}</span>
-                  ))}
-                </div>
-              </div>
+                  <div className="add__info_experience">
+                    <h5 className="profile_experience">Skills</h5>
+                    <div className='skills'>
+                      {user?.selectedSkills?.map((skill) => (
+                        <span className='chip__  chip' key={skill?.id}>{skill?.name}</span>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
+
+
             </div>)}
 
           </div>
