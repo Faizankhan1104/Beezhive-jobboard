@@ -27,32 +27,29 @@ const Profile = () => {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [expId, setExpId] = useState()
 
-  useEffect(() => {
-    const fetchUserProfile = async () => {
-
+ useEffect(() => {
+    const fetchData = async () => {
       try {
-        const response = await axios.get(`/api/v1/auth/get-User/${auth.user?._id}`);
-
-
-        if (response.data) {
-
-          setUser(response.data.user);
-
+        const userProfileResponse = await axios.get(`/api/v1/auth/get-User/${auth.user?._id}`);
+        if (userProfileResponse.data) {
+          setUser(userProfileResponse.data.user);
         } else {
           console.error('Profile picture data not found in the response.');
         }
+
+        const employmentDetailsResponse = await axios.get(`/api/v1/employment/employment-details/${auth.user?._id}`);
+        if (employmentDetailsResponse.data) {
+          setEmploymentDetails(employmentDetailsResponse.data);
+        } else {
+          console.error('Employment details not found in the response.');
+        }
       } catch (error) {
-        console.error('Error fetching user data:', error);
-
-
+        console.error('Error fetching data:', error);
       }
     };
 
-    fetchUserProfile();
+    fetchData();
   }, [auth]);
-
-
-
 
   const handleaddEmployment = () => {
     setIsModalOpen(true);
@@ -108,43 +105,7 @@ const Profile = () => {
 
   };
 
-  useEffect(() => {
-    const fetchEmploymentDetails = async () => {
-      try {
-        const response = await axios.get(`/api/v1/employment/employment-details/${auth.user?._id}`);
-        if (response.data) {
-
-          setEmploymentDetails(response.data);
-        } else {
-          console.error('Profile picture data not found in the response.');
-        }
-      } catch (error) {
-        console.error('Error fetching employment details:', error);
-      }
-    };
-
-    fetchEmploymentDetails();
-  }, [auth]);
-
-  useEffect(() => {
-    const fetchEmploymentDetails = async () => {
-      try {
-        const response = await axios.get(`/api/v1/get-employment-details/${auth.user?._id}`);
-
-        if (response.data) {
-          setEmploymentDetails(response.data);
-        } else {
-          console.error('Profile picture data not found in the response.');
-        }
-      } catch (error) {
-        console.error('Error fetching employment details:', error);
-      }
-    };
-
-    fetchEmploymentDetails();
-  }, [auth]);
-
-
+  
 
   return (
     <div>
